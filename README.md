@@ -8,12 +8,12 @@ This is project is built with Haskell's
 [reflex-platform](https://github.com/reflex-frp/reflex-platform), mostly
 because I wanted to try it out. 
 
-* request auth token from user
+* request user/pass from user(if made into multi-user app - make auth token)
 * pull all repositories, filter out forks(see repositories api docs)
 * fetch every type of traffic info for each repository(see repositories/traffic api docs).
 * save per-day data for previous dates to database(so eventually will have more
   than the 14 day limit github gives us).
-* send to frontend & graph
+* send to frontend & graph(checkout `diagrams-reflex`)
 * cron job to update daily
 
 ## Run

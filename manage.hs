@@ -36,6 +36,11 @@ main = do
                 [ "-A", "shells.ghc"
                 , "--run", "cabal new-repl client"
                 ]
+        ["server-repl"] ->
+            run "nix-shell"
+                [ "-A", "shells.ghc"
+                , "--run", "cabal new-repl server"
+                ]
         -- Cleanup
         ["clean"] ->
             run "rm" [ "-rf" , "result*", "dist*" ]
@@ -46,6 +51,7 @@ main = do
                 , "ghc-build"
                 , "ghcjs-build"
                 , "client-repl"
+                , "server-repl"
                 , "clean"
                 , ""
                 ]
