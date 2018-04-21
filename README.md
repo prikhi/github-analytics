@@ -4,6 +4,8 @@ I wanted an application that would pull all the traffic data from my github
 repositories & show me a graph & table of total pageviews & clones, along with
 a breakdown per repository.
 
+![A screenshot of the Github Analytics application, showing a table of repositories and their view counts from the last 14 days.](/screenshot.png?raw=true "Github Analytics")
+
 This is project is built with Haskell's
 [reflex-platform](https://github.com/reflex-frp/reflex-platform), mostly
 because I wanted to try it out.
