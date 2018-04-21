@@ -18,6 +18,9 @@ First install nix, it's easiest to do via the `reflex-platform`:
     $ reflex-platform/try-reflex
     [nix-shell] $ exit
 
+You might need to add something like `source
+~/.nix-profile/etc/profile.d/nix.sh` to your `.bashrc`.
+
 The easiest way to start developing is launching GHCi to run the server & GTK
 client:
 
@@ -31,7 +34,7 @@ client:
     > :r
     > main
 
-Changes to `common/` require restarting `ghci`. The client repl also has a
+Changes to `common/` will require restarting `ghci`. The client repl also has a
 `mainServer` function that will allow you build with GHC & connect with your
 browser to `http://localhost:3911`.
 
@@ -46,10 +49,19 @@ You can get faster, incremental builds using `./manage.hs ghc-build` &
 
 * Add graphs (probably using `diagrams-reflex`?), requires returning views per day
 * More data: referrers, pages, clones, unique views
+* Add organizations - with checkboxes to toggle on & off
+* Add filters - affiliation, type(fork/source), language, etc
+* Add table sorting
+* Figure out proper XHR error handling(use `WithError` function)
 * Style it
+* Add needed Github data types & endpoints to `phadej/github` package instead
+  of writing it ourselves.
 * Make it permanent!
 
-    * After receiving user/pass, make & store github API token & use that instead
+    * After receiving user/pass, make & store github API token & use that instead.
+      Would be really cool to give users option to encrypt token w/ password
+      and have them submit password when they want to update. Wouldn't let us
+      automatically pull traffic data, but much more secure.
     * Save user's historical per-day data(maybe monthly data for people who aren't me)
       - github only gives us the last 14 days.
     * Cron job to update data every day? Would need to store api tokens unencrypted.

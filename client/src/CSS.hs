@@ -20,9 +20,3 @@ renderedCss = encodeUtf8 . toStrict . render $ do
         justifyContent center
         alignItems center
         height $ pct 100
-    button ? do
-        backgroundColor grey
-        color black
-    input ? do
-        backgroundColor grey
-        color black
